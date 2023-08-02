@@ -10,6 +10,7 @@ const getAllNotes = async (req, res) => {
   }
 };
 
+
 const createNote = async (req, res) => {
   try {
     // res.send("post req");
