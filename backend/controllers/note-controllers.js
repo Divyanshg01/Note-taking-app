@@ -33,7 +33,21 @@ const getNote = async (req, res) => {
   }
 };
 
-const updateNote = (req, res) => {};
+const updateNote = async (req, res) => {
+  try {
+    const { id: noteID } = req.params;
+    const note = await NOTE.findOneAndUpdate({ _id: noteID }, req.body, {
+      new: true,
+      runValidators: true,
+    });
+    if (!note) {
+      return res.status(404).json({ msg: "not found" });
+    }
+    res.status(201).json({ note });
+  } catch (error) {
+    res.status(500).json({ msg: error });
+  }
+};
 
 const deleteNote = async (req, res) => {
   try {
