@@ -41,4 +41,17 @@ const showNotes = async () => {
 };
 showNotes();
 
+//delete items
 
+noteEl.addEventListener("click", async (e) => {
+  const element = e.target;
+  if (element.classList.contains("delete")) {
+    const id = element.dataset.id;
+    try {
+      await axios.delete(`/notes/${id}`);
+      showNotes();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+});
