@@ -7,7 +7,7 @@ const showNotes = async () => {
     const {
       data: { notes },
     } = await axios.get("/notes");
-    instanceEl.innerHTML = `<h1>api added</h1>`;
+    // instanceEl.innerHTML = `<h1>api added</h1>`;
     console.log(notes);
     const allNotes = notes
       .map((note) => {

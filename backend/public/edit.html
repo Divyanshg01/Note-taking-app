@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="edit.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="edit">
+        <div class="part form-title">
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" class="note-title-edit" />
+        </div>
+        <div class="part form-description">
+          <label for="description">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="27"
+            rows="15"
+            class="note-description-edit"
+          ></textarea>
+        </div>
+        <div class="button">
+          <button type="button" class="edit-button">
+            <a href="/" class="submit-form">Submit</a>
+          </button>
+        </div>
+
+        <a href="/" class="backtohome">Back to tasks </a>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="edit.js"></script>
+  </body>
+</html>

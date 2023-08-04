@@ -21,13 +21,17 @@ button {
   transition: all 0.5s;
   border-radius: 25px;
   cursor: pointer;
+  text-decoration: none;
   justify-content: flex-start;
+  /* color: white; */
   /* text-align: center; */
 }
+
 button:hover {
-  color: blueviolet;
+  /* color: blueviolet; */
   background-color: white;
   border: 1px solid sandybrown;
+  color: #482c89;
 }
 .notes {
   margin-top: 40px;
@@ -108,4 +112,19 @@ i {
 .view:hover,
 .delete:hover {
   background-color: #b29bea;
+}
+/* a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: #482c89;
+} */
+body > button > a {
+  color: white;
+  text-decoration: none;
+}
+
+body > button:hover > a {
+  color: #482c89;
 }
