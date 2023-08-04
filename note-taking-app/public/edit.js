@@ -2,7 +2,8 @@ const querystring = window.location.search;
 const ItitleEl = document.querySelector(".note-title-edit");
 const IdescriptionEl = document.querySelector(".note-description-edit");
 const formEl = document.querySelector("form");
-
+const titleError = document.querySelector(".title-error");
+const descError = document.querySelector(".description-error");
 const urlparams = new URLSearchParams(querystring);
 
 const displayNote = async () => {
@@ -29,7 +30,17 @@ const submit = document.querySelector(".submit-form");
 submit.addEventListener("click", async (e) => {
   e.preventDefault();
   const title = ItitleEl.value;
+  if (title === "") {
+    titleError.style.display = "block";
+  } else {
+    titleError.style.display = "none";
+  }
   const description = IdescriptionEl.value;
+  if (description === "") {
+    descError.style.display = "block";
+  } else {
+    descError.style.display = "none";
+  }
   if (urlparams.has("id")) {
     const id = urlparams.get("id");
     const {

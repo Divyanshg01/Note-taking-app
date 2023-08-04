@@ -73,7 +73,22 @@ a:active {
 
   /* justify-content: flex-start; */
 }
+
+.err {
+  /* display: hidden; */
+  opacity: 0.6;
+  margin-left: 30px;
+  color: red;
+  font-size: 15px;
+}
+/* making things adjust */
 a.backtohome {
   color: #30569e;
   /* background-color: white; */
+}
+.title-error {
+  display: none;
+}
+.description-error {
+  display: none;
 }

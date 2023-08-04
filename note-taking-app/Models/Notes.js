@@ -11,7 +11,7 @@ const NotesSchemma = new mongoose.Schema({
     type: String,
     required: [true, "Must include the notes"],
     trim: true,
-    maxlength: [500, "can not exceed 500"],
+    maxlength: [5000, "can not exceed 500"],
   },
 });
 
