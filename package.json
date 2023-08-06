@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon ./note-taking-app/app.js"
+    "start": "nodemon ./app.js"
   },
   "dependencies": {
     "axios": "^1.4.0",
